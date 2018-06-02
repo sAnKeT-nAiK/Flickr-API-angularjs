@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<link rel="stylesheet" type="text/css" href="../resources/bootstrap.min.css">
+	<script src="../resources/bootstrap.min.js"></script>
+	<script src="../resources/angular.min.js"></script>
+	<script src="../resources/angular-route.min.js"></script>
+	<script src="../controllers/mainController.js"></script>
+</head>
+<body>
+	<div class="container" ng-app="myapp" ng-controller="mycontroller">
+
+	<!-- <p><a href="#/!">Main</a></p> -->
+	<a href="#!abcd">route page without refresh</a>
+<!-- <div ng-view></div> -->
+	<ng-view></ng-view>
+
+
+
+	<div ng-repeat="detail in photos">
+		<div ng-repeat="i in detail">
+			<div ng-repeat="val in i" class="row">
+				<div ng-repeat="a in val" class="col-md-3">
+					<img src="http://farm{{a.farm}}.staticflickr.com/{{a.server}}/{{a.id}}_{{a.secret}}.jpg" height="200px" width="200px">
+					<h3></h3>
+				</div>
+		    </div>
+		</div>
+	</div>
+	
+	</div>
+
+
+</body>
+</html>
